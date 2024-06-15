@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PI pico</title>
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" >
+    <link rel="stylesheet" href="{% static 'public/index.css' %}">
+    <script defer type="module" src="{% static 'src/index.js' %}"></script>
+  </head>
+  <body>
+    <h2>Joystick: </h2><span id="ejes"></span>
+    <div id="app">
+      <div id="cuadro"></div>
+    </div>
+    <div class="botones">
+      <a href="{% url 'index' %}"><button type="button">Inicio</button></a>
+      <button type="button" id="desconectar">Desconectar</button>
+    </div>
+  </body>
+</html>
